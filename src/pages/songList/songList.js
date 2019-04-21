@@ -71,14 +71,16 @@ export default class Index extends Component {
       return
     }
     if(topList && topList.data) {
+      const title = topList.data.topTitle
       this.setState({
-        listName: topList.data.topTitle
+        listName: title
       })
     }
     const rankList = await getTopListInfo(id, 'taoge')
     const resp = await getTracks(rankList.songList, 'taoge')
     const tracks = resp.req_1.data.tracks
     const len = tracks.length
+    const title = rankList.toplistInfo.dissname
     if(len < 50) {
       this.setState({
         total: len,
@@ -86,7 +88,7 @@ export default class Index extends Component {
         topListInfo: rankList.toplistInfo,
         loading: false,
         tracks: tracks,
-        listName: rankList.toplistInfo.dissname,
+        listName: title,
         albumDesc: rankList.albumDesc,
         intro: rankList.intro
       })
@@ -114,7 +116,7 @@ export default class Index extends Component {
         mid: tracks[0].mid,
         topListInfo: rankList.toplistInfo,
         loading: false,
-        listName: rankList.toplistInfo.dissname,
+        listName: title,
         albumDesc: rankList.albumDesc,
         intro: rankList.intro
       }, async () => {
@@ -123,6 +125,7 @@ export default class Index extends Component {
         }
       })
     }
+    this.setTitle(title)
     this.getMidurlinfo(rankList.songList)
   }
 
@@ -144,6 +147,14 @@ export default class Index extends Component {
 
   getAlbum() {
     return this.state.topListInfo.logo
+  }
+
+  setTitle(title) {
+    if(CLIENT_ENV === 'h5') {
+      document.querySelector('title').innerHTML = title
+    } else {
+      Taro.setNavigationBarTitle({title: title})
+    }
   }
 
   // 根据mid获取audio url

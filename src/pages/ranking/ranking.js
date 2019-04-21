@@ -74,9 +74,11 @@ export default class Index extends Component {
       albumId: id + ''
     })
     if(topList.errMsg === 'getStorage:ok') {
+      const title = topList.data.topTitle
       this.setState({
-        listName: topList.data.topTitle
+        listName: title
       })
+      this.setTitle(title)
     }
     const rankList = await getTopListInfo(id)
     const resp = await getTracks(rankList.songList)
@@ -139,6 +141,14 @@ export default class Index extends Component {
     })
     if(CLIENT_ENV === 'h5') {
       this.h5HandlePageScroll()
+    }
+  }
+
+  setTitle(title) {
+    if(CLIENT_ENV === 'h5') {
+      document.querySelector('title').innerHTML = title
+    } else {
+      Taro.setNavigationBarTitle({title: title})
     }
   }
 
