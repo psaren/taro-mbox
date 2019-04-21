@@ -1,0 +1,45 @@
+.inline-box {
+  display: inline-block;
+}
+.update-icon {
+  padding-left: 20px;
+  font-size: 24px;
+}
+.icon-go-up, .icon-go-down, .icon-new, .icon-curved-up  {
+  display: inline-block;
+  background-image: url("https://mbox.fontend.com/imgs/update.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+  background-size: 16Px 40Px;
+}
+.icon-go-up {
+  width: 13px;
+  height: 16px;
+  background-position: 0 0;
+}
+.icon-go-down {
+  width: 13px;
+  height: 16px;
+  background-position: 0 -20px;
+}
+.icon-new {
+  width: 32px;
+  height: 10px;
+  background-position: 0 -40px;
+}
+.icon-curved-up {
+  width: 16px;
+  height: 15px;
+  background-position: 0 -59px;
+}
+.icon-unchange {
+  display: inline-block;
+  width: 14px;
+  height: 4px;
+  background-color: #a4aab0;
+}
+.count-num {
+  margin-left: 2px;
+}

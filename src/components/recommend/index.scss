@@ -1,0 +1,85 @@
+@import '@styles/sprites.scss';
+
+.flex-box {
+  display: flex;
+  align-content: space-between;
+  flex: 1;
+  // flex-wrap: wrap;
+  // flex-direction: column;
+}
+.swiper-item {
+  background: #f45;
+  height: 100%;
+}
+.swiper-img {
+  width: 100%;
+  height: 100%;
+}
+.section {
+  padding: 20px;
+}
+.section-title {
+  font-size: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.radio-img {
+  width: 100%;
+  height: 350px;
+}
+.flex-1 {
+  flex: 1;
+}
+.ftitle {
+  font-size: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+.radio-left {
+  margin-right: 10px;
+  background-color: #fff;
+}
+.radio-right {
+  margin-left: 10px;
+  background-color: #fff;
+}
+.icon-box {
+  background: #000;
+}
+.radio-img-box {
+  position: relative;
+  z-index: 1;
+}
+.icon-start {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  z-index: 2;
+}
+.author {
+  padding-bottom: 20px;
+}
+
+.flex-box__audio {
+  @extend .flex-box;
+}
+
+.flex-box__song {
+  @extend .flex-box;
+  margin-top: 20px;
+}
+.play-volume {
+  position: absolute;
+  z-index: 9;
+  left: 10px;
+  bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+.icon-headset {
+  width: 25px;
+  height: 24px;
+  background-size: 24Px;
+  margin-right: 10px;
+}

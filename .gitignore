@@ -1,0 +1,7 @@
+dist/
+dist-h5/
+.temp/
+.rn_temp/
+node_modules/
+.DS_Store
+.vscode

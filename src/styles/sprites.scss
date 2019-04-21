@@ -1,0 +1,53 @@
+.icon-start, .icon-stop, .icon-headset {
+  background: url('https://y.gtimg.cn/mediastyle/mobile/yqq_v5/img/list_sprite.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.icon-start {
+  width: 48px;
+  height: 48px;
+  background-position: 0 0;
+  background-size: 100%;
+}
+.icon-stop {
+  width: 48px;
+  height: 48px;
+  background-position: 0 -49Px;
+  background-size: 100%;
+}
+.icon-headset {
+  width: 20px;;
+  height: 19px;
+  background-position: bottom left;
+  background-size:20Px;
+
+}
+.icon-up, .icon-down, .icon-new, .icon-curved-up  {
+  display: inline-block;
+  background-image: url("https://mbox.fontend.com/imgs/update.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+  background-size: 16px 40px;
+}
+.icon-up {
+  width: 13px;
+  height: 16px;
+  background-position: 0 0;
+}
+.icon-down {
+  width: 13px;
+  height: 16px;
+  background-position: 0 -20px;
+}
+.icon-new {
+  width: 32px;
+  height: 10px;
+  background-position: 0 -40px;
+}
+.icon-curved-up {
+  width: 16px;
+  height: 15px;
+  background-position: 0 -59px;
+}

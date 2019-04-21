@@ -1,0 +1,221 @@
+.ranking {
+  color: $text-color;
+}
+.section-title {
+  font-size: 30px;
+}
+.list-box {
+  padding: 0;
+}
+.loading-box {
+  position: relative;
+  height: 200px;
+}
+.song {
+  &-list {
+    padding: 20px 0;
+  }
+  &-name {
+    color: $text-color-light;
+  }
+  &-name, &-name-box {
+    font-size: 28px;
+  }
+  &-info {
+    font-size: 24px;
+    color: $text-color;
+    @extend .ellipsis;
+  }
+  &-index {
+    display: inline-block;
+    width: 60px;
+    text-align:center;
+
+  }
+  &-index-top {
+    color: #FF400B;
+  }
+  &-album-img {
+    position: absolute;
+    z-index: 10;
+    width: 240px;
+    height: 240px;
+    top: 40px;
+    left: 40px; 
+    
+  }
+  &-album-img-bg {
+    position: absolute;
+    width: 100%;
+    will-change: transform;
+    object-fit: cover;
+    transform: scale(1.1) translateZ(0);
+    filter: blur(36px);
+    z-index: 9;
+  }
+}
+.info {
+  &-box {
+    position: relative;
+    background: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    margin-bottom: 10px;
+    z-index: 1;
+    height: 480px;
+    color: #fff;
+  }
+  &-text {
+    position: absolute;
+    z-index: 10;
+    left: 310px;
+    top: 80px;
+  }
+}
+.fixed-top {
+  position: fixed;
+  top: -290px;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+.is-fixed-top {
+  margin-top: 200px;
+}
+.list-name {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.section-title {
+  padding: 20px;
+}
+.update-date {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.btn-play-all {
+  position: absolute;
+  z-index: 10;
+  bottom: 50px;
+  width: 50%;
+  height: 70px;
+  line-height: 70px;
+  background-color: $tab-active-color;
+  border-radius: 35px 35px;
+  left: 25%;
+  color: #fff;
+  font-size: 30px;
+  border: 0;
+}
+.triangle-right {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 20px solid #fff;
+  border-bottom: 15px solid transparent;
+  margin-right: 10px;
+}
+.my-audio {
+  display: none;
+}
+.info {
+  padding: 30px;
+  &-header {
+    padding-bottom: 30px;
+    text-align: center;
+    color: $text-color-light;
+    font-size: 36px;
+  }
+  &-line {
+    min-height: 30px;
+    font-size: 30px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+}
+.brand {
+  text-align: center;
+  padding-bottom: 100px;
+  &-logo {
+    width: 58px;
+    height: 58px;
+  }
+  &-name {
+    font-size: 30px;
+  }
+}
+
+.play-status {
+  position:absolute;
+  z-index: 9;
+  left: 40px;
+  bottom: 80px;
+  width:100%;
+  height:100rpx;
+  @extend .ellipsis;
+}
+
+.img {
+  &-play, &-stop {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.lrc {
+  &-box {
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    width: calc(100% - 200px);
+  }
+  &-line {
+    height: 30px;
+    line-height: 30px;
+    font-size: 26px;
+    color: rgba(255,255,255,.5);
+    @extend .ellipsis;
+  }
+}
+.playing-song {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 100%;
+  &-name {
+    font-size: 30px;
+  }
+}
+.current {
+  &-song-name,
+  &-singer-name,
+  &-song-info {
+    color: $tab-active-color;
+  }
+}
+.icon-up {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+.list-order {
+  display: inline-block;
+  width: 90px;
+  font-size: 28px;
+  vertical-align: top;
+}
+.list-info {
+  display: inline-block;
+  width: calc(100% - 90px);
+  font-size: 24px;
+  color: #777777;
+  vertical-align: top;
+}
+.song-list {
+  .list-order {
+    width: 2.2rem;
+  }
+  .list-info {
+    width: calc(100% - 2.2rem); 
+  }
+}

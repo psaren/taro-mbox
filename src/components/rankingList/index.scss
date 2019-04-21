@@ -1,0 +1,69 @@
+@import '@styles/sprites.scss';
+
+.ranking {
+  padding-top: 0;
+}
+
+.list-item {
+  margin-top: 20px;
+  position: relative;
+}
+
+.cover-box {
+  position: relative;
+  min-width: 200px;
+  width: 200px;
+  height: 200px;
+}
+.cover-img {
+  width: 100%;
+  height: 100%;
+}
+.song-item {
+  width: calc(100% - 20px);
+  font-size: 24px;
+  color: rgba(0,0,0,.5);
+  padding-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.flex-1 {
+  flex: 1;
+}
+.rank-list {
+  @extend .flex-1;
+  padding: 20px;
+  overflow: hidden;
+}
+.top-title {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.song-name {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000;
+}
+.listen-count {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+.count-text {
+  padding-left: 6px;
+}
+
+.topic-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+  transform: rotate(-45deg);
+}

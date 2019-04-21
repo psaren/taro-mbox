@@ -1,0 +1,22 @@
+.flex-box {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.tab-box {
+  height: 80px;
+  background-color: #fff;
+  line-height: 80px;
+} 
+
+.tab-item {
+  color: $tab-color;
+  text-align: center;
+}
+.active {
+  color: $tab-active-color;
+  @include border(bottom, 4px, solid, $tab-active-color);
+}

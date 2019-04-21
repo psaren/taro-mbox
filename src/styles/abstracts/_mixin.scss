@@ -1,0 +1,7 @@
+// 单边border写法
+@mixin border($dir, $width, $style, $color) {
+  border: 0 $style $color;
+  @each $d in $dir {
+    #{border-#{$d}-width}: $width;
+  }
+}

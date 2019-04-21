@@ -1,0 +1,18 @@
+.not-found {
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding-top: 200px;
+}
+.cry-img {
+  width: 200px;
+  height: 300px;
+}
+.text-active {
+  color: $text-active-color;
+}
