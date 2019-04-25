@@ -214,22 +214,18 @@ export default class Index extends Component {
   
   async getMidurlinfo(songList) {
     const resp = await getTaogeVkey(songList)
-    const midurlinfo = resp.req_0.data.midurlinfo.concat(resp.req_1.data.midurlinfo)
+    const midurlinfo = resp.req_0.data.midurlinfo
     if(midurlinfo.length < 50) {
       this.setState({
         midurlinfo: midurlinfo
-      }, () => {
-        this.setState(prevState => {
-          const playUrl = {}
-          prevState.midurlinfo.forEach(item => {
-            playUrl[item.songmid] = item.purl
-          })
-          return {
-            playUrl
-          }
-        })
       })
-
+      const playUrl = {}
+      midurlinfo.forEach(item => {
+        playUrl[item.songmid] = item.purl
+      })
+      this.setState({
+        playUrl: playUrl
+      })
     } else {
       const midurlinfoChunk = chunk(midurlinfo, 50)
       const setMidUrlInfo = (item) => {
