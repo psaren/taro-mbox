@@ -256,7 +256,7 @@ export default class Search extends Component {
           onClick={this.showDialog.bind(this)}
         >
           <Icon className='icon-music'></Icon>
-          <View className='flex-1 name-box'>
+          <View className='flex-1 name-box ellipsis'>
             <View className='songname'>{item.songname}</View>
             <View className='singer-name'>{singer}</View>
           </View>
