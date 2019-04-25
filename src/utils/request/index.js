@@ -4,8 +4,6 @@ import { decodeHTML } from '@utils/format'
 import getTrackData from './getTrackData'
 import getVkeyData from './getVkeyData'
 
-
-
 // 封装request
 const doRequest = ({url, method = 'GET', config = {}, data, header, success, fail}) => {
   header = header || {}

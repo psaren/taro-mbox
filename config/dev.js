@@ -1,3 +1,4 @@
+const HOST = 'https://mbox.fontend.com'
 module.exports = {
   env: {
     NODE_ENV: '"development"'
@@ -5,5 +6,14 @@ module.exports = {
   defineConstants: {
   },
   weapp: {},
-  h5: {}
+  h5: {
+    devServer: { 
+      proxy: {
+        '/': {
+          target: HOST,
+          changeOrigin: true
+        }
+      }
+    }
+  }
 }
