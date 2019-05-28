@@ -47,7 +47,8 @@ export const getTracks = async (list, type) => {
   const ids = []
   const types = []
   list.forEach(item => {
-    ids.push(type === 'toplist' ? item.data.songid : item.songid)
+    console.log(item)
+    ids.push(type === 'toplist' ? item.ksong.id : item.songid)
     types.push(0)
   })
   getTrackData.req_1.param = {
@@ -68,12 +69,12 @@ export const getVkey = async (list) => {
   const mp3songType = []
   const mp3fileName = []
   list.forEach(item => {
-    if(item.data.tryPlay) {
+    if(item.data && item.data.tryPlay) {
       mp3songmid.push(item.data.songmid)
       mp3songType.push(0)
       mp3fileName.push('RS20' + item.data.strMediaMid + '.mp3')
     } else {
-      songmids.push(item.data.songmid)
+      songmids.push(item.ksong.mid)
     }
   })
   getVkeyData.req_0.param.songmid = songmids

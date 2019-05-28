@@ -85,7 +85,7 @@ export default class Index extends Component {
     const tracks = resp.req_1.data.tracks
     const len = tracks.length
     for(let i = 0;i < len;i++) {
-      if(tracks[i].mid === rankList.songList[i].data.songmid) {
+      if(tracks[i].mid === rankList.songList[i].ksong.mid) {
         tracks[i].in_count = rankList.songList[i].in_count
         tracks[i].Franking_value = rankList.songList[i].Franking_value
         tracks[i].cur_count = rankList.songList[i].cur_count
@@ -380,7 +380,8 @@ export default class Index extends Component {
     const playImg = `${HOST}/imgs/${this.state.playing ? 'stop' : 'play'}.png`
     const { audio, loading, fixedTop, topListInfo, albumDesc, listName, albumId, notFound } = this.state
     let info = null
-    if(topListInfo.info !== '') {
+    console.log(topListInfo.info)
+    if(topListInfo.info && topListInfo.info !== '') {
       info = topListInfo.info.split('<br>').map((item, index) => {
         return (
           <View 
